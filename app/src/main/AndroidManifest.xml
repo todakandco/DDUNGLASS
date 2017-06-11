@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="co.todak.ddunglass">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <!-- 상단바 테마 -->
+        <!-- AppTheme 는 기본 상단바, Theme.AppCompat.NoActionBar 는 상단바를 없앰 -->
+        <!-- android:theme="@style/AppTheme" -->
+        <!-- android:theme="@style/Theme.AppCompat.NoActionBar" -->
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 액티비티를 새로 열기 위해선 다음과 같이 선언을 해주어야 함 -->
+        <activity
+            android:name=".CropActivity"
+            android:exported="true"
+            android:label="CropActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+    <!-- 권한 추가 하기 위해 퍼미션을 추가한 부분 -->
+    <!-- 이지만 마쉬멜로 이상의 버전에서는 이렇게 권한이 추가가 안 되는 것 같음 -->
+    <!-- https://news.realm.io/kr/news/android-marshmellow-permission/ 참고 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>
