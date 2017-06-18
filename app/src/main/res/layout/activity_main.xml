@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="co.todak.ddunglass.MainActivity">
+    tools:context="co.todak.ddunglass.Activity.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,9 +23,10 @@
             android:text="TODAKANDCO!" />
 
         <ImageView
+            android:id="@+id/iv_titleScreen"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/attachimage" />
+            android:src="@drawable/img_title" />
 
     </LinearLayout>
 
@@ -36,27 +37,11 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btncamera"
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="카메라 버튼" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btngallery"
-            android:layout_weight="1"
-            android:text="사진 버튼" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/btn_Crop"
-            android:text="Crop" />
-
-
+            android:text="다음" />
     </LinearLayout>
 
 </LinearLayout>

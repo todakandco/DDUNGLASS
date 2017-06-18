@@ -24,6 +24,7 @@
 
         <!-- FrameLayout은 ImageView 위에 ImageView 를 띄우기 위함 -->
         <FrameLayout
+            android:id="@+id/framePhoto"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -32,21 +33,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-            <ImageView
+            <co.todak.ddunglass.CustomContext.GImageView
                 android:id="@+id/glass_image"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_alignBottom="@id/user_image"
                 android:layout_alignLeft="@id/user_image"
                 android:layout_alignRight="@id/user_image"
                 android:layout_alignTop="@id/user_image"
                 android:layout_gravity="center"
                 android:gravity="center"
-
-                android:maxHeight="200dp"
-                android:maxWidth="200dp"
-                android:onClick="onClick"
-                android:src="#FF0000" />
+                android:scaleType="matrix"
+                android:visibility="invisible"/>
 
         </FrameLayout>
 
